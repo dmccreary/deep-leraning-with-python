@@ -7,7 +7,6 @@ nav:
   - Chapter 3 - Getting Started: chapters/ch03.md
   - Glossary: glossary.md
   - References: references.md
-  - Blogs: blogs.md
   - Contact: contact.md
 
 site_description: 'CoderDojo Twin Cities Deep Learning With Python'
