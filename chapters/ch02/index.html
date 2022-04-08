@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-2" class="md-skip">
+        <a href="#chapter-2-getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -259,9 +259,73 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 2 - What is a DNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Chapter 2 - What is a DNN
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-for-doing-labs" class="md-nav__link">
+    Setup for Doing Labs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-tensorflow" class="md-nav__link">
+    Downloading Tensorflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-versions" class="md-nav__link">
+    Check Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-tensorflow-version" class="md-nav__link">
+    Testing Your TensorFlow Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-visual-studio-code" class="md-nav__link">
+    Configuring Visual Studio Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-jypyter-notebook-kernel" class="md-nav__link">
+    Configuring Jypyter Notebook Kernel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -365,6 +429,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-for-doing-labs" class="md-nav__link">
+    Setup for Doing Labs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-tensorflow" class="md-nav__link">
+    Downloading Tensorflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-versions" class="md-nav__link">
+    Check Versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-your-tensorflow-version" class="md-nav__link">
+    Testing Your TensorFlow Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-visual-studio-code" class="md-nav__link">
+    Configuring Visual Studio Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-jypyter-notebook-kernel" class="md-nav__link">
+    Configuring Jypyter Notebook Kernel
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -380,7 +494,119 @@
                   </a>
                 
                 
-                <h1 id="chapter-2">Chapter 2</h1>
+                <h1 id="chapter-2-getting-started">Chapter 2: Getting Started</h1>
+<p>We demonstrate a setup using Conda, pip and VSCode.</p>
+<h2 id="setup-for-doing-labs">Setup for Doing Labs</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>conda create -n deep-learning <span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda activate
+</code></pre></div>
+</td></tr></table>
+<p>The first step may take 1-2 minutes.</p>
+<h2 id="downloading-tensorflow">Downloading Tensorflow</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install tensorflow
+</code></pre></div>
+</td></tr></table>
+<p>This might take about 2-3 minutes.</p>
+<h2 id="check-versions">Check Versions</h2>
+<p>We can use the pip freeze command to verify.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip freeze
+absl-py<span class="o">==</span><span class="m">1</span>.0.0
+<span class="nv">astunparse</span><span class="o">==</span><span class="m">1</span>.6.3
+<span class="nv">cachetools</span><span class="o">==</span><span class="m">5</span>.0.0
+<span class="nv">certifi</span><span class="o">==</span><span class="m">2020</span>.6.20
+charset-normalizer<span class="o">==</span><span class="m">2</span>.0.12
+<span class="nv">flatbuffers</span><span class="o">==</span><span class="m">2</span>.0
+<span class="nv">gast</span><span class="o">==</span><span class="m">0</span>.5.3
+google-auth<span class="o">==</span><span class="m">2</span>.6.3
+google-auth-oauthlib<span class="o">==</span><span class="m">0</span>.4.6
+google-pasta<span class="o">==</span><span class="m">0</span>.2.0
+<span class="nv">grpcio</span><span class="o">==</span><span class="m">1</span>.44.0
+<span class="nv">h5py</span><span class="o">==</span><span class="m">3</span>.6.0
+<span class="nv">idna</span><span class="o">==</span><span class="m">3</span>.3
+<span class="nv">keras</span><span class="o">==</span><span class="m">2</span>.8.0
+Keras-Preprocessing<span class="o">==</span><span class="m">1</span>.1.2
+<span class="nv">libclang</span><span class="o">==</span><span class="m">13</span>.0.0
+<span class="nv">Markdown</span><span class="o">==</span><span class="m">3</span>.3.6
+<span class="nv">numpy</span><span class="o">==</span><span class="m">1</span>.22.3
+<span class="nv">oauthlib</span><span class="o">==</span><span class="m">3</span>.2.0
+opt-einsum<span class="o">==</span><span class="m">3</span>.3.0
+<span class="nv">protobuf</span><span class="o">==</span><span class="m">3</span>.20.0
+<span class="nv">pyasn1</span><span class="o">==</span><span class="m">0</span>.4.8
+pyasn1-modules<span class="o">==</span><span class="m">0</span>.2.8
+<span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.27.1
+requests-oauthlib<span class="o">==</span><span class="m">1</span>.3.1
+<span class="nv">rsa</span><span class="o">==</span><span class="m">4</span>.8
+<span class="nv">six</span><span class="o">==</span><span class="m">1</span>.16.0
+<span class="nv">tensorboard</span><span class="o">==</span><span class="m">2</span>.8.0
+tensorboard-data-server<span class="o">==</span><span class="m">0</span>.6.1
+tensorboard-plugin-wit<span class="o">==</span><span class="m">1</span>.8.1
+<span class="nv">tensorflow</span><span class="o">==</span><span class="m">2</span>.8.0
+tensorflow-io-gcs-filesystem<span class="o">==</span><span class="m">0</span>.24.0
+<span class="nv">termcolor</span><span class="o">==</span><span class="m">1</span>.1.0
+tf-estimator-nightly<span class="o">==</span><span class="m">2</span>.8.0.dev2021122109
+<span class="nv">typing_extensions</span><span class="o">==</span><span class="m">4</span>.1.1
+<span class="nv">urllib3</span><span class="o">==</span><span class="m">1</span>.26.9
+<span class="nv">Werkzeug</span><span class="o">==</span><span class="m">2</span>.1.1
+<span class="nv">wrapt</span><span class="o">==</span><span class="m">1</span>.14.0
+</code></pre></div>
+</td></tr></table>
+<h2 id="testing-your-tensorflow-version">Testing Your TensorFlow Version</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>return</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mf">2.8.0</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="configuring-visual-studio-code">Configuring Visual Studio Code</h2>
+<p><img alt="Visual Studio Code UI" src="img/visual-studio-code-ui.png" /></p>
+<p>Note the blue area at the bottom of the screen allows you to select the virtual environment.  In this case the label is:</p>
+<p><code>Python 3.10.4 64-bit ('deep-learning':conda)</code></p>
+<h2 id="configuring-jypyter-notebook-kernel">Configuring Jypyter Notebook Kernel</h2>
+<p>Not only do we want to get the Python runtime, but we want to configure the Jupyter Notebook Kernel</p>
+<p>On the upper right click on the kernel and then select the appropriate deep-learning conda environment:</p>
+<p><img alt="Visual Studio Jupyter Kernel" src="img/visual-studio-jupyter-kernel.png" /></p>
                 
               
               

@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3" class="md-skip">
+        <a href="#chapter-3-running-the-minst-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -275,9 +275,45 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Chapter 3 - Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Chapter 3 - Getting Started
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-shape-of-data" class="md-nav__link">
+    Getting the Shape of Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-optimization-errors" class="md-nav__link">
+    TensorFlow Optimization Errors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -365,6 +401,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-shape-of-data" class="md-nav__link">
+    Getting the Shape of Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-optimization-errors" class="md-nav__link">
+    TensorFlow Optimization Errors
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -380,7 +438,35 @@
                   </a>
                 
                 
-                <h1 id="chapter-3">Chapter 3</h1>
+                <h1 id="chapter-3-running-the-minst-demo">Chapter 3: Running the MINST Demo</h1>
+<p>Import the MNIST dataset.  Put 60K into training and 10K into test.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+<span class="p">(</span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">),</span> <span class="p">(</span><span class="n">test_images</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="" src="img/loading-mnst.png" /></p>
+<h2 id="getting-the-shape-of-data">Getting the Shape of Data</h2>
+<p>The shape function will tell is the dimensions of the input dataset:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">train_images</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>(60000, 28, 28)
+</code></pre></div>
+</td></tr></table>
+<p>There are 60,000 training images that are 28 by 28 pixels.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">test_images</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>(10000, 28, 28)
+</code></pre></div>
+</td></tr></table>
+<h2 id="tensorflow-optimization-errors">TensorFlow Optimization Errors</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="mf">2022</span><span class="o">-</span><span class="mf">04</span><span class="o">-</span><span class="mf">08</span> <span class="mf">14</span><span class="p">:</span><span class="mf">38</span><span class="p">:</span><span class="mf">30.403775</span><span class="p">:</span> <span class="n">I</span> <span class="n">tensorflow</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">cpu_feature_guard</span><span class="mf">.</span><span class="n">cc</span><span class="p">:</span><span class="mf">151</span><span class="err">]</span> <span class="n">This</span> <span class="n">TensorFlow</span> <span class="n">binary</span> <span class="n">is</span> <span class="n">optimized</span> <span class="n">with</span> <span class="kr">on</span><span class="n">eAPI</span> <span class="n">Deep</span> <span class="n">Neural</span> <span class="n">Network</span> <span class="n">Library</span> <span class="p">(</span><span class="kr">on</span><span class="n">eDNN</span><span class="p">)</span> <span class="kr">to</span> <span class="n">use</span> <span class="n">the</span> <span class="n">following</span> <span class="n">CPU</span> <span class="n">instructions</span> <span class="n">in</span> <span class="n">performance</span><span class="o">-</span><span class="n">critical</span> <span class="n">operations</span><span class="p">:</span>  <span class="n">AVX2</span> <span class="n">FMA</span>
+<span class="kr">To</span> <span class="n">enable</span> <span class="n">them</span> <span class="n">in</span> <span class="n">other</span> <span class="n">operations</span><span class="p">,</span> <span class="n">rebuild</span> <span class="n">TensorFlow</span> <span class="n">with</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">compiler</span> <span class="n">flags</span><span class="mf">.</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
