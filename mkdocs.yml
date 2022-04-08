@@ -1,0 +1,40 @@
+site_name: Deep Learning With Python
+nav:
+  - Home: index.md
+  - Table of Contents: table-of-contents.md
+    Chapter 1 - Introduction: chapters/ch01.md
+    Chapter 2 - What is a DNN: chapters/ch02.md
+    Chapter 3 - Getting Started: chapters/ch03.md
+  - Glossary: glossary.md
+  - References: references.md
+  - Blogs: blogs.md
+  - Contact: contact.md
+
+site_description: 'CoderDojo Twin Cities Deep Learning With Python'
+site_author: 'Dan McCreary'
+repo_name: 'deep-learning-with-python'
+repo_url: 'https://github.com/dmccreary/deep-learning-with-python'
+
+edit_uri: 'blob/master/docs'
+theme:
+  name: material
+  logo: img/book-logo.png
+  favicon: img/favicon.png
+  palette:
+    primary: 'orange'
+    accent: 'blue'
+  custom_dir: 'theme'
+  include_sidebar: true
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - codehilite:
+      linenums: true
+plugins:
+    - search
+markdown_extensions:
+  - codehilite:
+      linenums: true
+
