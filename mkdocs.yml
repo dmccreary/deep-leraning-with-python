@@ -2,9 +2,9 @@ site_name: Deep Learning With Python
 nav:
   - Home: index.md
   - Table of Contents: table-of-contents.md
-    Chapter 1 - Introduction: chapters/ch01.md
-    Chapter 2 - What is a DNN: chapters/ch02.md
-    Chapter 3 - Getting Started: chapters/ch03.md
+  - Chapter 1 - Introduction: chapters/ch01.md
+  - Chapter 2 - What is a DNN: chapters/ch02.md
+  - Chapter 3 - Getting Started: chapters/ch03.md
   - Glossary: glossary.md
   - References: references.md
   - Blogs: blogs.md
